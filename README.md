@@ -49,3 +49,4 @@ pip install -v -e .
 # 其它
 1.如果提示RuntimeError: CUDA error: invalid device function，则很可能是mmcv-full版本问题，可以安装其它版本进行尝试。
 2.如果提示train.py里的某个函数不存在，是由于mmdetection版本较新引起的（老版本的某些东西在新版本中已经去除），可以根据mmdetection/tools下的train.py对reasoning-rcnn/tools里的train.py进行修改。
+3.如果执行./compile.sh出现gcc等问题，很可能是由于cuda，cudnn，pytorch，mmcv-full版本存在不匹配问题。

@@ -33,6 +33,8 @@ torchvision       0.7.0
 typing_extensions 4.5.0
 wheel             0.38.4
 yapf              0.32.0
+![image](https://user-images.githubusercontent.com/105783906/222870913-1709b253-5593-407e-8b7a-0d36a6143c59.png)
+![image](https://user-images.githubusercontent.com/105783906/222870917-bcf28855-88a5-455a-84df-12593b40b4d7.png)
 # Detail
 上述项目为执行./compile.sh后的，可以直接用，或者你可以在自己的环境下重新执行（安装完需要的库后）
 1.安装mmcv-full

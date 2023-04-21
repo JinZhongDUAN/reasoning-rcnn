@@ -62,10 +62,14 @@ yapf            0.32.0
 5.执行测试(根据实际进行修改)
 
 ```python test.py configs/coco_faster_rcnn_r101_fpn_1x.py work_dirs/faster_rcnn_r101_fpn_1x/aluminum/epoch_3.pth --json_out work_dirs/test_result/aluminum_rrcnn_result```
+
 ```python coco_eval.py work_dirs/test_result/faster_rcnn_result.bbox.json --ann /root/aluminum/annotations/val.json```
 
 # 其它
 1.如果执行./compile.sh出现gcc等问题，很可能是由于cuda，cudnn，pytorch，mmcv版本存在不匹配问题。
+
 2.其他环境未测试，谨慎尝试。
+
 3.如果使用官方的mmdetection0.5.7不能直接用，需要修改相应代码。
+
 4.如果非想使用官方的mmdetection，建议使用mmdetection1.0.0,代码改动会少点。

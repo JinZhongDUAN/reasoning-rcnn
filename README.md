@@ -37,18 +37,24 @@ torchvision     0.2.1
 wheel           0.37.1
 yapf            0.32.0
 # Detail
-本项目以执行./compile.sh,可以直接用，或者你可以在自己的环境下重新执行（安装完需要的库）
-1.安装mmcv-full
-pip install mmcv-full=={mmcv_version} -f https://download.openmmlab.com/mmcv/dist/{cu_version}/{torch_version}/index.html
-例如pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu101/torch1.6.0/index.html
-2.安装mmdetection
-git clone https://github.com/open-mmlab/mmdetection.git
-cd mmdetection
-pip install -v -e .
-3.安装上述所需的库，包括torch1.6.0和torchvision0.7.0
-4.执行训练（reasoning-rcnn目录下）：python ./tools/train.py configs/faster_rcnn_r101_fpn_1x_coco.py
+本项目使用mmdetection0.5.7,需要的话在此{https://github.com/Jinzhong-Duan/mmdetection}下载（以对官方版本内容进行了相关修改，可以直接用于Reasoning-RCNN）
+1.创建conda虚拟环境并安装requirements.txt里面的库并激活进入虚拟环境
+```pip install -r requirements.txt```
+2.安装mmcv（先安装mmcv后安装mmdetection）
+```pip install mmcv==0.4.3```
+3.安装mmdetection0.5.7
+```git clone https://github.com/Jinzhong-Duan/mmdetection.git```
+```conda install cython #pip install cython```
+```cd mmdetection#如果已经在此目录不需要此条命令```
+```./compile.sh```
+```python setup.py install #pip install .```
+4.执行训练
+```python ./tools/train.py configs/faster_rcnn_r101_fpn_1x_coco.py```（reasoning-rcnn目录下）
+5.执行测试(根据实际进行修改)
+```python test.py configs/coco_faster_rcnn_r101_fpn_1x.py work_dirs/faster_rcnn_r101_fpn_1x/aluminum/epoch_3.pth --json_out work_dirs/test_result/aluminum_rrcnn_result```
+```python coco_eval.py work_dirs/test_result/faster_rcnn_result.bbox.json --ann /root/aluminum/annotations/val.json```
 # 其它
-1.如果提示RuntimeError: CUDA error: invalid device function，则很可能是mmcv-full版本问题，可以安装其它版本进行尝试。
-2.如果提示train.py里的某个函数不存在，是由于mmdetection版本较新引起的（老版本的某些东西在新版本中已经去除），可以根据mmdetection/tools下的train.py对reasoning-rcnn/tools里的train.py进行修改。
-3.如果执行./compile.sh出现gcc等问题，很可能是由于cuda，cudnn，pytorch，mmcv-full版本存在不匹配问题。
-4.本项目必须安装mmcv-full，mmcv精简版执行不了。
+1.如果执行./compile.sh出现gcc等问题，很可能是由于cuda，cudnn，pytorch，mmcv版本存在不匹配问题。
+2.其他环境未测试，谨慎尝试。
+3.如果使用官方的mmdetection0.5.7不能直接用，需要修改相应代码。
+4.如果非想使用官方的mmdetection，建议使用mmdetection1.0.0,代码改动会少点。

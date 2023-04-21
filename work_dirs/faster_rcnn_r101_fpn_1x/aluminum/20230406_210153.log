@@ -1,0 +1,2 @@
+2023-04-06 21:01:53,949 - INFO - Start running, host: mrduan@mrduan-X542UN, work_dir: /home/mrduan/projects/RRCNN/Reasoning-RCNN/work_dirs/faster_rcnn_r101_fpn_1x
+2023-04-06 21:01:53,949 - INFO - workflow: [('train', 1)], max: 12 epochs

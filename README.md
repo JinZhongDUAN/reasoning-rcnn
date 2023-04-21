@@ -65,7 +65,7 @@ yapf            0.32.0
 
 5.执行测试(根据实际进行修改)
 
-```python test.py configs/coco_faster_rcnn_r101_fpn_1x.py work_dirs/faster_rcnn_r101_fpn_1x/aluminum/epoch_3.pth --json_out work_dirs/test_result/aluminum_rrcnn_result```
+```python test.py configs/coco_faster_rcnn_r101_fpn_1x.py work_dirs/faster_rcnn_r101_fpn_1x/epoch_3.pth --json_out work_dirs/test_result/aluminum_rrcnn_result```
 
 ```python coco_eval.py work_dirs/test_result/faster_rcnn_result.bbox.json --ann /root/aluminum/annotations/val.json```
 

@@ -77,3 +77,5 @@ yapf            0.32.0
 3.如果使用官方的mmdetection0.5.7不能直接用，需要修改相应代码。
 
 4.如果非想使用官方的mmdetection，建议使用mmdetection1.0.0,代码改动会少点。
+
+5.hkrm和reasoning-rcnn都可以正常运行，但sgrn缺失sample_bboxes_return_index函数还没实现。

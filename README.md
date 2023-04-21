@@ -1,5 +1,6 @@
-本项目来源于https://github.com/chanyn/Reasoning-RCNN,对其进行了相关内容修改使其可以运行
+本项目来源于https://github.com/chanyn/Reasoning-RCNN
 Reasoning-RCNN: Unifying Adaptive Global Reasoning into Large-scale Object Detection (CVPR2019 Oral)
+对其进行了相关内容修改使其可以运行，测试环境如下：
 # Environments（Ubuntu16.04，python3.6）
 addict          2.4.0
 certifi         2021.5.30
@@ -46,7 +47,6 @@ cd mmdetection
 pip install -v -e .
 3.安装上述所需的库，包括torch1.6.0和torchvision0.7.0
 4.执行训练（reasoning-rcnn目录下）：python ./tools/train.py configs/faster_rcnn_r101_fpn_1x_coco.py
-![image](https://user-images.githubusercontent.com/105783906/222872455-0e308d56-1cc9-4526-9be6-5139836906f0.png)
 # 其它
 1.如果提示RuntimeError: CUDA error: invalid device function，则很可能是mmcv-full版本问题，可以安装其它版本进行尝试。
 2.如果提示train.py里的某个函数不存在，是由于mmdetection版本较新引起的（老版本的某些东西在新版本中已经去除），可以根据mmdetection/tools下的train.py对reasoning-rcnn/tools里的train.py进行修改。

@@ -50,9 +50,13 @@ yapf            0.32.0
 3.安装mmdetection0.5.7
 
 ```git clone https://github.com/Jinzhong-Duan/mmdetection.git```
+
 ```conda install cython #pip install cython```
+
 ```cd mmdetection#如果已经在此目录不需要此条命令```
+
 ```./compile.sh```
+
 ```python setup.py install #pip install .```
 
 4.执行训练

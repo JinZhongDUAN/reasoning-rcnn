@@ -1,39 +1,40 @@
-本项目来源于https://github.com/chanyn/Reasoning-RCNN
+本项目来源于https://github.com/chanyn/Reasoning-RCNN,对其进行了相关内容修改使其可以运行
 Reasoning-RCNN: Unifying Adaptive Global Reasoning into Large-scale Object Detection (CVPR2019 Oral)
-# Environments（Ubuntu18.04，python3.7）
-addict            2.4.0
-certifi           2022.12.7
-cycler            0.11.0
-fonttools         4.37.1
-kiwisolver        1.4.4
-matplotlib        3.5.3
-mkl-fft           1.3.1
-mkl-random        1.2.2
-mkl-service       2.4.0
-mmcv-full         1.3.17
-mmdet             2.28.2    /root/mmdetection
-ninja             1.11.1
-numpy             1.21.5
-opencv-python     4.6.0.66
-packaging         23.0
-Pillow            9.0.1
-pip               22.3.1
-psutil            5.9.4
-pycocotools       2.0.6
-pyparsing         3.0.9
-python-dateutil   2.8.2
-PyYAML            6.0
-scipy             1.7.3
-setuptools        65.6.3
-six               1.16.0
-terminaltables    3.1.10
-torch             1.6.0
-torchvision       0.7.0
-typing_extensions 4.5.0
-wheel             0.38.4
-yapf              0.32.0
-![image](https://user-images.githubusercontent.com/105783906/222872199-fd4dd8d7-ddd7-4a1a-915a-96ec02d1fb8d.png)
-![image](https://user-images.githubusercontent.com/105783906/222872207-b0e6ba0f-5d1d-45aa-85d8-c7eff075c017.png)
+# Environments（Ubuntu16.04，python3.6）
+addict          2.4.0
+certifi         2021.5.30
+cffi            1.14.6
+cycler          0.11.0
+Cython          0.29.33
+kiwisolver      1.3.1
+matplotlib      3.3.4
+mkl-fft         1.0.6
+mkl-random      1.0.1
+mmcv            0.4.3
+mmdet           0.5.7+6d83f89
+numpy           1.15.4
+olefile         0.46
+opencv-python   4.6.0.66
+packaging       21.3
+pandas          0.25.3
+Pillow          8.3.1
+pip             21.3.1
+pycocotools     2.0.6
+pycparser       2.21
+pyparsing       3.0.0
+python-dateutil 2.8.2
+pytz            2023.3
+PyYAML          6.0
+scipy           1.5.4
+seaborn         0.11.2
+setuptools      58.0.4
+six             1.16.0
+TBB             0.2
+terminaltables  3.1.10
+torch           0.4.1
+torchvision     0.2.1
+wheel           0.37.1
+yapf            0.32.0
 # Detail
 本项目以执行./compile.sh,可以直接用，或者你可以在自己的环境下重新执行（安装完需要的库）
 1.安装mmcv-full

@@ -59,11 +59,11 @@ yapf            0.32.0
 
 ```python setup.py install #pip install .```
 
-4.执行训练
+4.执行训练(记得修改/mmdetection/mmdet/datasets/coco.py里面的CLASSES为自己数据集的类别)
 
 ```python ./tools/train.py configs/faster_rcnn_r101_fpn_1x_coco.py```（reasoning-rcnn目录下）
 
-5.执行测试(根据实际进行修改)
+5.执行测试(根据实际进行修改)（记得在/mmdetection/mmdet/core/evaluation/class_names.py里自定义类别获取函数并添加到dataset_aliases）
 
 ```python test.py configs/coco_faster_rcnn_r101_fpn_1x.py work_dirs/faster_rcnn_r101_fpn_1x/epoch_3.pth --json_out work_dirs/test_result/aluminum_rrcnn_result```
 
